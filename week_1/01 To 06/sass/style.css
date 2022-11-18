@@ -1,0 +1,341 @@
+* {
+  box-sizing: border-box;
+}
+
+.contact {
+  padding: 20px;
+}
+
+.class-1 {
+  font-size: 11px;
+  color: green;
+}
+
+.class-2 {
+  font-size: 12px;
+  color: green;
+}
+
+.class-3 {
+  font-size: 13px;
+  color: green;
+}
+
+.class-4 {
+  font-size: 14px;
+  color: green;
+}
+
+.class-5 {
+  font-size: 15px;
+  color: green;
+}
+
+.class-6 {
+  font-size: 16px;
+  color: green;
+}
+
+.class-7 {
+  font-size: 17px;
+  color: green;
+}
+
+.class-8 {
+  font-size: 18px;
+  color: green;
+}
+
+.class-9 {
+  font-size: 19px;
+  color: green;
+}
+
+.class-10 {
+  font-size: 20px;
+  color: green;
+}
+
+.class-11 {
+  font-size: 21px;
+  color: green;
+}
+
+.class-12 {
+  font-size: 22px;
+  color: green;
+}
+
+.class-13 {
+  font-size: 23px;
+  color: green;
+}
+
+.class-14 {
+  font-size: 24px;
+  color: green;
+}
+
+.class-15 {
+  font-size: 25px;
+  color: green;
+}
+
+.class-16 {
+  font-size: 26px;
+  color: green;
+}
+
+.class-17 {
+  font-size: 27px;
+  color: green;
+}
+
+.class-18 {
+  font-size: 28px;
+  color: green;
+}
+
+.class-19 {
+  font-size: 29px;
+  color: green;
+}
+
+.class-20 {
+  font-size: 30px;
+  color: green;
+}
+
+.class-21 {
+  font-size: 31px;
+  color: green;
+}
+
+.class-22 {
+  font-size: 32px;
+  color: green;
+}
+
+.class-23 {
+  font-size: 33px;
+  color: green;
+}
+
+.class-24 {
+  font-size: 34px;
+  color: green;
+}
+
+.class-25 {
+  font-size: 35px;
+  color: green;
+}
+
+.class-26 {
+  font-size: 36px;
+  color: green;
+}
+
+.class-27 {
+  font-size: 37px;
+  color: green;
+}
+
+.class-28 {
+  font-size: 38px;
+  color: green;
+}
+
+.class-29 {
+  font-size: 39px;
+  color: green;
+}
+
+.class-30 {
+  font-size: 40px;
+  color: green;
+}
+
+.class-31 {
+  font-size: 41px;
+  color: green;
+}
+
+.class-32 {
+  font-size: 42px;
+  color: green;
+}
+
+.class-33 {
+  font-size: 43px;
+  color: green;
+}
+
+.class-34 {
+  font-size: 44px;
+  color: green;
+}
+
+.class-35 {
+  font-size: 45px;
+  color: green;
+}
+
+.class-36 {
+  font-size: 46px;
+  color: green;
+}
+
+.class-37 {
+  font-size: 47px;
+  color: green;
+}
+
+.class-38 {
+  font-size: 48px;
+  color: green;
+}
+
+.class-39 {
+  font-size: 49px;
+  color: green;
+}
+
+.class-40 {
+  font-size: 50px;
+  color: green;
+}
+
+.class-41 {
+  font-size: 51px;
+  color: green;
+}
+
+.class-42 {
+  font-size: 52px;
+  color: green;
+}
+
+.class-43 {
+  font-size: 53px;
+  color: green;
+}
+
+.class-44 {
+  font-size: 54px;
+  color: green;
+}
+
+.class-45 {
+  font-size: 55px;
+  color: green;
+}
+
+.class-46 {
+  font-size: 56px;
+  color: green;
+}
+
+.class-47 {
+  font-size: 57px;
+  color: green;
+}
+
+.class-48 {
+  font-size: 58px;
+  color: green;
+}
+
+.class-49 {
+  font-size: 59px;
+  color: green;
+}
+
+.class-50 {
+  font-size: 60px;
+  color: green;
+}
+
+.content > .box {
+  padding: 15px;
+}
+.content > .box > .title {
+  font-size: 18px;
+}
+.content .cat {
+  padding: 15px;
+}
+.content.premium::before {
+  content: "Premium Box";
+}
+.content.premium:hover {
+  background-color: #eee;
+}
+
+.class1 > .child {
+  padding: 10px;
+}
+
+.class2 > .child {
+  padding: 10px;
+}
+
+.class3 > .child {
+  padding: 10px;
+}
+
+.class {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.parent + .sibling {
+  margin: auto;
+  margin-top: 10px;
+}
+.parent + .sibling ~ .last {
+  padding: 10px;
+}
+
+.my-class, .widget {
+  background-color: white;
+  padding: 20px;
+}
+
+.my-class, .main-border {
+  border: 1px solid #CCC;
+}
+
+.my-class {
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+.box h2, .box p {
+  font-size: 20px;
+}
+@media (max-width: 575px) {
+  .box h2, .box p {
+    font-size: 16px;
+  }
+  .box h2 span, .box p span {
+    font-weight: bold;
+  }
+}
+
+.box a {
+  color: #e91e63;
+}
+.box a:hover {
+  color: #009688;
+}
+
+.box {
+  font-size: 20px;
+}
+.box-holder {
+  width: 1000px;
+}
+.box-holder-content {
+  margin: auto;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,186 @@
+/// Import Files
+    // Import Global Ruls
+    @use "./layout/global-ruls";
+
+    // Import Contact 
+    @use "./pages/contact";
+
+    // Import Variablr Colors
+    @use "./variable/colors" as *;
+/// 
+
+@for $i from 1 through 50 {
+    .class-#{$i} {
+        font-size: 10px + $i;
+        color: $main_color;
+    }
+}
+
+
+// Assignment 1
+.content {
+    > .box {
+        padding: 15px;
+        > .title {
+            font-size: 18px;
+        }
+    }
+    .cat {
+        padding: 15px;
+    }
+    &.premium::before {
+        content: "Premium Box";
+    }
+    &.premium:hover {
+        background-color: #eee;
+    }
+}
+
+
+// Assignment 2
+.class1 {
+    > .child {
+        padding: 10px;
+    }
+}
+
+.class2 > {
+    .child {
+        padding: 10px;
+    }
+}
+
+.class3 {
+
+    > {
+        .child{
+            padding: 10px;
+        }
+    }
+}
+
+
+// Assignment 3  
+.class {
+    font: {
+        size: 10px;
+        weight: bold;
+    }
+}
+
+
+// Assignment 4  
+.parent {
+    & + .sibling {
+        margin: auto {
+            top: 10px;
+        }
+        & ~ .last {
+            padding: 10px;
+        }
+    }
+}
+// Explanation of the code is not needed
+// pes of cake
+
+
+
+
+
+
+
+
+
+
+
+// Assignment 5 
+%toolbelt_1 {
+    background-color: white;
+    padding: 20px;
+}
+%toolbelt_2 {
+    border: 1px solid #CCC;
+}
+.widget {
+    @extend %toolbelt_1;
+}
+.main-border {
+    @extend %toolbelt_2;
+    
+}
+.my-class {
+    @extend %toolbelt_1;
+    @extend %toolbelt_2;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+
+// Assignment 6
+// I don't know the solution
+
+
+
+
+
+
+
+
+// Assignment 7 
+.box h2, .box p {
+    font-size: 20px;
+    @media (max-width: 575px) {
+        font-size: 16px;
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+// Assignment 8 
+.box {
+    a {
+    color: $red;
+    &:hover {
+        color: $green;
+    }
+    }
+}
+// or 
+// .box {
+//     a {
+//     color: colors.$red;
+//     &:hover {
+//         color: colors.$green;
+//     }
+//     }
+// }
+
+
+
+// Assignment 9 
+// Explanation of the code is not needed
+// pes of cake 
+
+
+
+
+
+
+
+// Assignment 10
+
+.box {
+    font-size: 20px;
+    &-holder {
+        width: 1000px;
+        &-content {
+            margin: auto;
+        }
+    }
+};
+
+
+

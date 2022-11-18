@@ -1,0 +1,247 @@
+/// Import Files
+    // Import Global Ruls
+    @use "./layout/global-ruls";
+
+    // Import Contact 
+    @use "./pages/contact";
+
+    // Import Variablr Colors
+    @use "./variable/colors" as *;
+    // Import helpers >> Mixins
+    @use "./helpers/mixins" as *;
+/// 
+
+// Tisting Code
+// Mixins
+.circle-center {
+    @include centering;
+    @include circle(500px);
+}
+// Loop => For
+@for $i from 1 through 5 {
+    .class-#{$i} {
+        font-size: 10px + $i;
+        font-size: #{$i + 10px};
+    }
+}
+$dimantions_1: 0;
+@for $i from 1 through 5 {
+    .circle_1-#{100 + $dimantions_1} {
+        width: 100 + $dimantions_1;
+        height: 100 + $dimantions_1;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+    $dimantions_1: 100 + $dimantions_1;
+}
+
+// Each + Maps
+
+
+
+
+
+
+
+
+
+
+
+// Assignment 1
+
+/* Top 1 */
+@mixin arrow_top($top) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: $top;
+    border-bottom-color: red;
+}
+.element {
+    &:before {
+        @include arrow_top(-40px);
+    }
+}
+///
+@mixin arrow_right($right) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $right;
+    border-bottom-color: green;
+}
+.element {
+    &:before {
+        @include arrow_right(-40px);
+    }
+}
+///
+@mixin arrow_bottom($bottom) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: $bottom;
+    border-top-color: red;
+}
+.element {
+    &:before {
+        @include arrow_bottom(-40px);
+    }
+}
+///
+@mixin arrow_left($left) {
+    content: "";
+    position: absolute;
+    border: 20px solid transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -40px;
+    border-right-color: red;
+}
+.element {
+    &:before {
+        @include arrow_left(-40px);
+    }
+}
+
+
+
+
+
+
+
+
+
+// Assignment 2
+$grid-cols: 16;
+
+@for $i from 1 through $grid-cols {
+    .col-#{$i} {
+        width: percentage($i / $grid-cols);
+    }
+}
+
+
+
+
+
+
+
+// Assignment 3
+$list_names :
+    "books" 20px red 18,
+    "games" 30px green 18,
+    "dvds" 20px blue;
+
+@each $class, $padding, $color, $font in $list_names {
+    @if $font == null {
+        $font: 16;
+    }
+    .#{$class} {
+    padding: $padding,;
+    font-size: #{$font}px;
+    border-bottom: 2px solid $color;
+    color: #444;
+    }
+}
+
+
+
+
+
+
+
+
+
+// Assignment 4
+$init: 1;
+@while $init <= 5 {
+    .circle-#{$init * 100} {
+        width: $init * 100px;
+        height: $init * 100px;
+        border-radius: ($init *100px) / 2;
+        -webkit-border-radius: ($init *100px) / 2;
+        -moz-border-radius: ($init *100px) / 2;
+        -ms-border-radius: ($init *100px) / 2;
+        -o-border-radius: ($init *100px) / 2;
+    }
+    $init: $init + 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Assignment 5 
+@for $i from 1 to 6 {
+    .circle-#{$i * 100} {
+        width: $i * 100px;
+        height: $i * 100px;
+        border-radius: ($i *100px) / 2;
+        -webkit-border-radius: ($i *100px) / 2;
+        -moz-border-radius: ($i *100px) / 2;
+        -ms-border-radius: ($i *100px) / 2;
+        -o-border-radius: ($i *100px) / 2;
+    }
+}
+
+
+
+
+
+// Assignment 6
+// I don't know the solution
+
+
+
+
+
+
+
+// Assignment 7
+// Write Mixin Code Here
+@mixin flex-center($width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $width;
+}
+
+.box-one {
+    @include flex-center(400px);
+}
+// .box-two {
+//     @include flex-center;
+// }  // I don't know the solution
+
+
+
+
+
+
+
+
+
+
+
+
+
+

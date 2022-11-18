@@ -1,0 +1,98 @@
+/// Import Files
+    // Import Global Ruls
+    @use "./layout/global-ruls";
+
+    // Import Contact 
+    @use "./pages/contact";
+
+    // Import Variablr Colors
+    @use "./variable/colors" as *;
+    // Import helpers >> Mixins
+    @use "./helpers/mixins" as *;
+    // Import helpers >> Functions
+    @use "./helpers/functions" as *;
+/// 
+
+// Tisting Code
+// Function 
+$width: 200px;
+.elem {
+    width: $width;
+    height: half($width);
+}
+
+// Assignment 6 ==>> SASS WEEK_1 11 To 15
+// Write Mixin Code Here
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+// Using
+textarea {
+    @include placeholder {
+        color: #777;
+    }
+}
+
+
+
+// Assignment 1 
+$num: 2;
+$start: 100;
+
+@function double($size) {
+    @return $size * $num;
+};
+@for $i from 1 to 6 {
+    .box-#{$start * $i} {
+        width: #{$start * $i}px;
+        height: #{double($start) + double($start) * $i}px;
+    }
+};
+
+
+
+// Assignment 2  
+@function get-total($sizeess...) {
+    $total: 0;
+    @each $size_1 in $sizeess {
+        $total: $total + $size_1;
+    }
+    @return $total;
+}
+
+.box {
+    top: get-total(100, 50, 20);
+    right: get-total(100, 50);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

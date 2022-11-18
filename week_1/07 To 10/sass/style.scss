@@ -1,0 +1,140 @@
+/// Import Files
+    // Import Global Ruls
+    @use "./layout/global-ruls";
+
+    // Import Contact 
+    @use "./pages/contact";
+
+    // Import Variablr Colors
+    @use "./variable/colors" as *;
+/// 
+
+
+
+
+// Assignment 1
+
+$main: "school";
+$child: "box";
+$language: "en"; // English
+$gap: 20px;
+
+.#{$main} {
+    padding: #{$gap};
+    @if $language == "en" {
+        direction: ltr;
+    } @else if $language == "ar" {
+        direction: rtl;
+    }
+    margin-left: #{$gap};
+    .#{$main}-#{$child} {
+        padding: calc(#{$gap} / 2);
+    }
+    &:hover .#{$main}-#{$child} {
+        background-color: #eee;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Assignment 2 
+// SASS Code
+$main-color: red;
+$alt-color: blue;
+
+/* Theme Version: 1.0 */
+/* Website Theme Main Color Is: #{$main-color} */
+/* Website Theme Alternate Color Is: #{$alt-color} */
+/**/
+
+
+
+
+
+
+
+
+
+
+// Assignment 3  
+// SASS Code
+$number: 5;
+
+.class {
+    // Larger Than 8
+    @if $number > 8 {
+        color: blue;
+    }
+    // Larger Than 5
+    @else if $number > 5 {
+        color: green;
+    }
+    // Anything Else
+    @else {
+        color: red;
+    }
+};
+
+
+
+
+// Assignment 4 
+// SASS Code
+$number: 10;
+$color: red;
+$theme: light;
+// Write If Condition Code Here
+.class {
+    @if $number > 5 && $color == #{$color} && $theme != dark {
+        color: #{$color};
+    }
+}
+
+
+
+
+// Assignment 5 
+$number_1: 8;
+
+.box {
+    @if $number_1 == 10 {
+        background-color: #EEE;
+        text-align: center;
+    }
+    @if $number_1 == 9 {
+        background-color: #EEE;
+    }
+    @if $number_1 == 8 {
+        // Nothing
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

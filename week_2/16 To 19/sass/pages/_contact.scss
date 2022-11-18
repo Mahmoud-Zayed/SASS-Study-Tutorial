@@ -1,0 +1,9 @@
+// Import Variablr Colors
+@use "../variable/colors" as *;
+
+
+
+.contact {
+    padding: 20px;
+    color: $alt_color;
+}
